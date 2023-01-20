@@ -17,11 +17,12 @@ import { Head } from '@inertiajs/inertia-vue3';
 
 <div class="relative  flex flex-col md:flex-row items-center md:shadow-xl md:h-72 mx-2">
     
-    <div class="z-0 order-1 relative w-full">
-        <div class="img src: storage/app/public/images/profile.jpeg;"></div>
+    <div class="z-10 order-1 relative w-full">
+        <div class="img src='img/profile.jpg';"></div>
         <div class="md:hidden absolute inset-0 h-full p-6 pb-6 flex flex-col-reverse justify-start items-start bg-gradient-to-b from-transparent via-transparent to-gray-900">
-            <h3 class="w-full font-bold text-2xl text-white leading-tight mb-2">HOTEL AMANEE</h3>
-            <h4 class="w-full text-xl text-gray-100 leading-tight">Bienvenido a</h4>
+            <h3 class="w-full font-bold text-2xl text-white leading-tight mb-2"></h3>
+            <img src="img/profile.jpg" />
+            <h4 class="w-full text-xl text-gray-100 leading-tight"></h4>
         </div>
         <svg class="hidden md:block absolute inset-y-0 h-full w-24 fill-current text-white -ml-12" viewBox="0 0 100 100" preserveAspectRatio="none">
             <polygon points="50,0 100,0 50,100 0,100" />
@@ -42,10 +43,64 @@ import { Head } from '@inertiajs/inertia-vue3';
             <p class="text-gray-600 text-justify"> <b>Email:</b><br/>{{ $page.props.auth.user.email }}</p>            
         </div>
     </div>
-
+    
 </div>
+
+<section class="overflow-hidden text-gray-700 ">
+  <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
+    <div class="flex flex-wrap -m-1 md:-m-2">
+      <div class="flex flex-wrap w-1/3">
+        <div class="w-full p-1 md:p-2">
+          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+            src="../img/landscape1.jpeg">
+        </div>
+      </div>
+      <div class="flex flex-wrap w-1/3">
+        <div class="w-full p-1 md:p-2">
+          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+            src="../img/landscape2.jpeg">
+        </div>
+      </div>
+      <div class="flex flex-wrap w-1/3">
+        <div class="w-full p-1 md:p-2">
+          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+            src="../img/landscape3.jpeg">
+        </div>
+      </div>
+      <div class="flex flex-wrap w-1/3">
+        <div class="w-full p-1 md:p-2">
+          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+            src="../img/landscape4.jpeg">
+        </div>
+      </div>
+      <div class="flex flex-wrap w-1/3">
+        <div class="w-full p-1 md:p-2">
+          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+            src="../img/landscape5.jpeg">
+        </div>
+      </div>
+      <div class="flex flex-wrap w-1/3">
+        <div class="w-full p-1 md:p-2">
+          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+            src="../img/landscape6.jpeg">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </div>
 
         
     </AuthenticatedLayout>
 </template>
+
+<script>
+import userData from '../landscapes.json'
+export default {
+  data() {
+    return {
+      users: userData,
+    };
+  },
+};
+</script>
