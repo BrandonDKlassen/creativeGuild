@@ -62,6 +62,7 @@ const showingNavigationDropdown = ref(false);
                                             </button>
                                         </span>
                                     </template>
+                                    
 
                                     <template #content>
                                         <DropdownLink :href="route('profile.edit')"> Profile </DropdownLink>
